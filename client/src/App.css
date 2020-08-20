@@ -1,0 +1,254 @@
+body {
+  background-color: #07072c;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: whitesmoke;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 15px;
+  font-family: "Bangers", cursive;
+  font-size: 60px;
+}
+
+.heading1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 8px;
+  font-family: "Bangers", cursive;
+  margin-top: 2rem;
+}
+
+.elem {
+  border-bottom: 5px dotted whitesmoke;
+}
+
+.data-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 8rem;
+}
+
+.king1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.925);
+  border-left: 5px double crimson;
+  border-top: 5px double crimson;
+  border-bottom: 5px double crimson;
+  box-shadow: 0px 0px 70px -3px rgba(107, 107, 107, 0.685);
+}
+
+.king1 img {
+  width: 490px;
+  height: 490px;
+}
+
+.k-img {
+  width: 500px;
+  height: 500px;
+  opacity: 0.2;
+}
+
+.king2 img {
+  position: relative;
+  width: 490px;
+  height: 490px;
+}
+
+.king2 {
+  width: 500px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.925);
+  box-shadow: 0px 0px 70px -3px rgba(107, 107, 107, 0.685);
+  border-right: 5px double rgb(37, 220, 20);
+  border-top: 5px double rgb(37, 220, 20);
+  border-bottom: 5px double rgb(37, 220, 20);
+}
+
+.bat-det-div {
+  width: 800px;
+  align-content: center;
+  height: auto;
+  margin: 0rem 6.3rem;
+  background: rgb(19, 18, 18);
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(19, 18, 18, 1) 0%,
+    rgba(27, 25, 25, 1) 62%,
+    rgba(22, 25, 25, 1) 100%
+  );
+  padding: 0.5rem;
+  font-family: "Bangers", cursive;
+  letter-spacing: 2px;
+  box-shadow: 0px 0px 70px -3px rgba(107, 107, 107, 0.685);
+}
+
+#battle-details {
+  list-style: square;
+}
+.stats-k2 {
+  width: 400px;
+  height: 80px;
+  margin-top: 5.2rem;
+  margin-right: 6.3rem;
+  background: rgb(19, 18, 18);
+  background: linear-gradient(
+    180deg,
+    rgba(19, 18, 18, 1) 0%,
+    rgba(27, 25, 25, 1) 62%,
+    rgba(22, 25, 25, 1) 100%
+  );
+}
+
+.inner-content-atc,
+.inner-content-def {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: -400px;
+  z-index: 999;
+}
+.inner-content-atc img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid crimson;
+  border-radius: 300px;
+  margin-left: 9rem;
+  z-index: 999;
+}
+
+.inner-content-def img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgb(27, 220, 20);
+  border-radius: 300px;
+  margin-left: 9rem;
+  z-index: 999;
+}
+
+.names {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.names ul {
+  list-style: none;
+  font-family: cursive;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+}
+
+.input-group {
+  width: 400px;
+  margin: 2rem;
+}
+
+.king-name {
+  border-bottom: 2px double rgba(245, 245, 245, 0.418);
+  margin-bottom: 0.5rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.upper,
+.lower {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-group input {
+  width: 350px;
+  height: 40px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+    width: 411px;
+  }
+  .heading {
+    width: 90%;
+    display: flex;
+    letter-spacing: 5px;
+    font-family: "Bangers", cursive;
+    font-size: 35px;
+    margin-left: 2rem;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .king1 {
+    width: 90%;
+    background: rgba(0, 0, 0, 0.925);
+    box-shadow: 0px 0px 70px -3px rgba(107, 107, 107, 0.685);
+    border: 5px double crimson;
+  }
+  .king2 {
+    width: 90%;
+    background: rgba(0, 0, 0, 0.925);
+    box-shadow: 0px 0px 70px -3px rgba(107, 107, 107, 0.685);
+    border: 5px double rgb(37, 220, 20);
+  }
+
+  .input-group input {
+    width: 200px;
+    margin-left: 2.5rem;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .input-group {
+    width: 300px;
+    margin-left: 2.5rem;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .king2 .k-img {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.925);
+    box-shadow: 0px 0px 70px -3px rgba(107, 107, 107, 0.685);
+  }
+
+  .king1 .k-img {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.925);
+    box-shadow: 0px 0px 70px -3px rgba(107, 107, 107, 0.685);
+  }
+
+  .k-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .inner-content-def img,
+  .inner-content-atc img {
+    margin-left: 5rem;
+  }
+
+  .heading1 {
+    margin-left: 2.5rem;
+    letter-spacing: 8px;
+    font-family: "Bangers", cursive;
+    margin-top: 2rem;
+  }
+}
