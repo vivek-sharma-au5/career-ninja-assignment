@@ -19,27 +19,39 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
+    this.getInitialData();
+    this.getCount();
+    this.getList();
+  };
+
+  getCount = () => {
+    axios({
+      method: "get",
+      url: "/count",
+    })
+      .then((res) => {
+        console.log("count", res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  getList = () => {
     axios({
       method: "get",
       url: "/list",
     })
       .then((res) => {
-        // const newData = res.data.filter(
-        //   (elem, index) => res.data.indexOf(elem) === index
-        // );
-        // const autoComplete = [];
-        // newData.forEach((ele) => autoComplete.push({ label: ele }));
-        // this.setState({
-        //   items: autoComplete,
-        // });
-
         this.props.sendList(res);
       })
       .catch((err) => {
         console.log(err);
       });
+  };
 
+  getInitialData = () => {
     axios({
       method: "get",
       url: "/search",
@@ -53,7 +65,6 @@ class App extends React.Component {
         const newData = autoComplete.filter(
           (elem, index) => autoComplete.indexOf(elem) === index
         );
-        console.log("dddddd", newData);
 
         newData.forEach((ele) => final.push({ label: ele }));
         this.setState({
@@ -65,18 +76,7 @@ class App extends React.Component {
       .catch((err) => {
         console.log(err);
       });
-
-    axios({
-      method: "get",
-      url: "/count",
-    })
-      .then((res) => {
-        console.log("count", res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
+  };
 
   postQuery = (e) => {
     e.preventDefault();
